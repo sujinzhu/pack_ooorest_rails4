@@ -1,0 +1,2 @@
+class PackingLabel
+end

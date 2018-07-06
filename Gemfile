@@ -50,3 +50,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'responders', '~> 2.0'
 gem 'ooor', github: 'akretion/ooor'
 gem 'ooorest', github: 'akretion/ooorest'
+gem 'barby'
