@@ -1,5 +1,5 @@
+#ruby=2.2
 source 'https://rubygems.org'
-
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.10'
@@ -52,3 +52,6 @@ gem 'ooor', github: 'akretion/ooor'
 gem 'ooorest', github: 'akretion/ooorest'
 gem 'barby'
 gem 'chunky_png'
+gem 'bootstrap-sass'
+
+gem 'haml-rails', '~> 1.0'

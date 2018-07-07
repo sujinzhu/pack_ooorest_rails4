@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get 'packing_label/index'
 
+  get 'packing_label/:id' => 'packing_label#show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
