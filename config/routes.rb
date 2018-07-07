@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'barcode/show'
+
   get 'packing_label/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

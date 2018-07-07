@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+.barby-barcode {}
+
+.barby-row {}
+
+.barby-cell {
+}
+
+.barby-cell .on {
+    background-color: #000000;
+}
+
+.barby-cell .off {
+    background-color: #ffffff;
+}
