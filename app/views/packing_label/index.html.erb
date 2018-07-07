@@ -1,5 +1,4 @@
 <h1><%=@last.name%></h1>
 <p>Find me in app/views/packing_label/index.html.erb</p>
 
-<% barcode = Barby::Code128B.new(@last.name)%>
-<%=barcode.to_svg%>
+<%=image_tag(barcode_show_path(format: :png, name: @last.name))%>
