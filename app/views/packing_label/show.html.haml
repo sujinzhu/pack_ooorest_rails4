@@ -12,7 +12,7 @@
           ]
           = @package.quant_ids[0].product_id.name
         %br
-        = @package.create_date
+        = @package.create_date.localtime
   .row
     - @package.quant_ids.each do |l|
       .col-xs-3.text-center
