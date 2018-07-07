@@ -1,3 +1,22 @@
-%div
+.packing-label
   .row
-    = image_tag(barcode_show_path(format: :png, name: @package.name))
+    .col-xs-6.text-center
+      = image_tag(barcode_show_path(format: :png, name: @package.name))
+      = @package.name
+    .col-xs-6
+      .small
+        %br
+        - if @package.quant_ids.length > 0
+          [
+          = @package.quant_ids[0].product_id.default_code
+          ]
+          = @package.quant_ids[0].product_id.name
+        %br
+        = @package.create_date
+  .row
+    - @package.quant_ids.each do |l|
+      .col-xs-3.text-center
+        - unless l.lot_id.nil?
+          = image_tag(barcode_show_path(format: :png, code: 'qr', name: l.lot_id.name))
+          .small
+            = l.lot_id.name

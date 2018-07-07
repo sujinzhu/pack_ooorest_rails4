@@ -55,3 +55,5 @@ gem 'chunky_png'
 gem 'bootstrap-sass'
 
 gem 'haml-rails', '~> 1.0'
+
+gem 'rqrcode'
