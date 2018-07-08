@@ -1,3 +1,8 @@
+.page-header.hidden-print
+  .btn-group.pull-right
+    = button_tag("Print", id: 'print')
+  %h1 Packing Label
+
 .packing-label
   .row
     .col-xs-6.text-center
@@ -20,3 +25,8 @@
           = image_tag(barcode_show_path(format: :png, code: 'qr', name: l.lot_id.name))
           .small
             = l.lot_id.name
+
+:coffee
+  $('#print').click ->
+    window.print();
+    document.location.href = '#{next_label_path(@id)}'

@@ -8,4 +8,7 @@ class PackingLabelController < ApplicationController
 
     @package = StockQuantPackage.find(@id)
   end
+
+  def next
+  end
 end
