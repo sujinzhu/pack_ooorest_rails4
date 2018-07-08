@@ -1,8 +1,14 @@
 .page-header.hidden-print
   .btn-group.pull-right
-    %a#print.btn.btn-primary.btn-lg{href: "#", role: "button"}
-      Print
-    -# = button_tag("Print", id: 'print')
+    %a#print.btn.btn-primary{href: "#", role: "button"}
+      %span.glyphicon.glyphicon-print
+      &nbsp;Print
+    %a.btn.btn-default{:href => "#{root_path}"}
+      %span.glyphicon.glyphicon-home
+      &nbsp;Home
+    %a#next.btn.btn-default{:href => "#"}
+      %span.glyphicon.glyphicon-step-forward
+      &nbsp;Next
   %h1 Packing Label
 
 .packing-label
@@ -31,4 +37,6 @@
 :coffee
   $('#print').click ->
     window.print();
+    document.location.href = '#{next_label_path(@id)}'
+  $('#next').click ->
     document.location.href = '#{next_label_path(@id)}'

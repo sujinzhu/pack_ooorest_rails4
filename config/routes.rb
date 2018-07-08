@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'packing_label/index'
   root 'packing_label#index'
 
-  get 'packing_label/:id' => 'packing_label#show'
+  get 'packing_label/:id' => 'packing_label#show', as: 'packing_label'
   get 'packing_label/next/:id' => 'packing_label#next', as: 'next_label'
 
   # The priority is based upon order of creation: first created -> highest priority.

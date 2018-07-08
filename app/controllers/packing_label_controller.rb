@@ -1,6 +1,6 @@
 class PackingLabelController < ApplicationController
   def index
-    @last = StockQuantPackage.last
+    @last = StockQuantPackage.order("id desc").limit(5)
   end
 
   def show

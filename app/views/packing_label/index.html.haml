@@ -1,3 +1,9 @@
-%h1= @last.name
-%p Find me in app/views/packing_label/index.html.erb
-= image_tag(barcode_show_path(format: :png, name: @last.name))
+.page-header
+    %h1 Paching Label
+
+%ul.list-group.col-xs-3
+    %li.list-group-item.active
+        Last packages (select one to begin)
+    - @last.each do |p|
+        %li.list-group-item
+            =link_to p.name, packing_label_path(p.id)
