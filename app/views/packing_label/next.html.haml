@@ -1,0 +1,10 @@
+.jumbotron
+    %h1 No found
+    %p No new package found, will retry after 60 seconds.
+    %a#retry.btn.btn-primary.btn-lg{href: "#", role: "button"}
+        Retry Now
+:coffee
+    setTimeout("location.reload();", 60000);
+
+    $('#retry').click ->
+        location.reload();

@@ -10,5 +10,12 @@ class PackingLabelController < ApplicationController
   end
 
   def next
+    @id = params[:id]
+
+    @ids = StockQuantPackage.search([['id', '>', @id]])
+
+    if @ids.length > 0
+      redirect_to action: "show", id: @ids.first
+    end
   end
 end
