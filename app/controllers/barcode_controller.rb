@@ -12,9 +12,9 @@ class BarcodeController < ApplicationController
 
   def show
     content = params[:name]
-    code = params[:code]
+    @code = params[:code]
 
-    case code
+    case @code
     when 'qr'
       @barcode = Barby::QrCode.new(content)
     else

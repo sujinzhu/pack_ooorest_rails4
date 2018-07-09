@@ -1,1 +1,4 @@
-= raw(@barcode.to_png(height: 20))
+- if @code == 'qr'
+    = raw(@barcode.to_png(xdim: 2))
+- else
+    = raw(@barcode.to_png(height: 20))
