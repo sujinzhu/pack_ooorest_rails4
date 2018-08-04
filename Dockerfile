@@ -33,3 +33,5 @@ RUN cd /home/app/webapp && RAILS_ENV=production rake assets:precompile
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+ENV OOOR_PASSWORD ""
