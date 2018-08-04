@@ -1,4 +1,3 @@
-#ruby=2.2
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -43,7 +42,7 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data'
 
 # gem 'activemodel-serializers-xml'
 # gem 'active_model_serializers'

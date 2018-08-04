@@ -43,7 +43,7 @@ test:
 #
 production:
   <<: *default
-  database: prod_db
-  username: portal_user
-  password: <%%= ENV['OOOR_PASSWORD'] %>
-  url: https://prod_host
+  database: maxmore
+  username: erp1@maxmore.asia
+  password: <%= ENV['OOOR_PASSWORD'] %>
+  url: https://maxmore.odoo.com

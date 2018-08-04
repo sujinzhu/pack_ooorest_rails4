@@ -1,4 +1,4 @@
-FROM phusion/passenger-ruby23:latest
+FROM phusion/passenger-ruby22:latest
 
 # Set correct environment variables.
 ENV HOME /root
@@ -29,7 +29,7 @@ ADD . /home/app/webapp
 
 RUN touch /home/app/webapp/log/production.log && chmod 0666 /home/app/webapp/log/production.log
 
-RUN cd /home/app/webapp && RAILS_ENV=production bin/rake assets:precompile
+RUN cd /home/app/webapp && RAILS_ENV=production rake assets:precompile
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
