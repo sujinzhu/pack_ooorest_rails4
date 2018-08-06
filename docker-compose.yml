@@ -1,12 +1,8 @@
 version: '3'
 services:
-  db:
-    image: postgres
   web:
     build: .
     volumes:
       - .:/myapp
     ports:
       - "5000:80"
-    depends_on:
-      - db
