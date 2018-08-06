@@ -6,7 +6,7 @@ require 'barby/outputter/html_outputter'
 require 'barby/outputter/png_outputter'
 
 class BarcodeController < ApplicationController
-  Mime::Type.register "image/png", :png
+  # Mime::Type.register "image/png", :png
   Mime::Type.register "image/svg+xml", :svg
   layout false
 

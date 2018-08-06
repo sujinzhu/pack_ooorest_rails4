@@ -25,13 +25,14 @@ RUN gem install bundler
 
 RUN cd /home/app/webapp && bundle install
 
-ADD . /home/app/webapp
+# ADD . /home/app/webapp
+COPY --chown=app:app . /home/app/webapp
 
 RUN touch /home/app/webapp/log/production.log && chmod 0666 /home/app/webapp/log/production.log
 
-RUN cd /home/app/webapp && chmod 777 -R tmp
-
 RUN cd /home/app/webapp && RAILS_ENV=production rake assets:precompile
+
+# RUN chmod 777 -R /home/app/webapp/tmp
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
